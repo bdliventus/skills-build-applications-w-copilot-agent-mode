@@ -1,3 +1,11 @@
+import os
+# Codespace URL for API endpoints
+CODESPACE_NAME = os.environ.get('CODESPACE_NAME', '')
+if CODESPACE_NAME:
+    CODESPACE_URL = f"https://{CODESPACE_NAME}-8000.app.github.dev"
+else:
+    CODESPACE_URL = "http://localhost:8000"
+# Example: https://$CODESPACE_NAME-8000.app.github.dev/api/activities/
 """octofit_tracker URL Configuration
 
 The `urlpatterns` list routes URLs to views. For more information please see:
